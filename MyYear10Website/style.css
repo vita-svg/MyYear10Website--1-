@@ -1,0 +1,109 @@
+/* A simple css reset */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* The Font Family- Really important!! */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: cornflowerblue;
+}
+
+/* reset for images to ensure they ar 100% of the parent container width */
+img {
+    width: 100%;
+}
+
+/* The hero section styling- use your OWN Hero Image URL here */
+.hero {
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* BIG text styling for the hero section text */
+.hero-text {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+/* nice big font on a banner style background */
+.topic-title {
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    padding: 0.1em 3em;
+    background-color: cornflowerblue (243, 0, 0);
+}
+
+/* Three column grid with a nice big gap */
+.topic-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6em;
+    /* bring the whole section in off the sides of the page */
+    width: 70%;
+    /* top margin of 3em and center right/left */
+    margin: 3em auto;
+}
+
+/* Styling for the individual topic cards rounded edges background color and a drop shadow */
+.topic-card {
+    background-color: darkred(3, 156, 194);
+    color:rgba(0, 247, 255, 0.747);
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 10px 10px 10px rgb(0, 87, 250);
+}
+
+/* Styling for the topic card titles */
+.topic-card-text {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    /* center align text */
+    text-align: center;
+}
+
+.topic-summary {
+    width: 70%;
+    margin: 3em auto;
+    text-align: center;
+}
+
+
+/* Styling for a footer section to take a bit of spcae at the bottom of the page */
+.footer {
+    background-color: black(197, 5, 255);
+    color: white;
+    text-align: right;
+    padding: 3em 3em;
+}
+
+
+
+/* Add styling for smaller devices here */
+@media (max-width: 1000px) {
+
+    /* Changes display to block so elements show below each other */
+    .topic-content {
+        display: block;
+
+
+    }
+
+    /* Adds a gap between each topic card */
+    .topic-card {
+        margin-bottom: 20px;
+
+    }
+
+    /* Increase font size for smaller devices */
+    .topic-summary {
+    font-size: 2em;
+}
+}
